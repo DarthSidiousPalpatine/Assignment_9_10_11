@@ -83,10 +83,11 @@ let errorsList = new Map()[[]];
 window.addEventListener('error', (event) => {
   console.log(event);
   let errString = `${event.error}<->${event.target}`;
-  if(errorsList[errString]) {
+  if(errorsList.length == 0 || errorsList[errString] == null) {
+    errorsList.set(errString, 1);
+  } else {
     errorsList[errString]++;
   }
-  errorsList.set(errString, 1);
   
   if(errorsList.length > 10) {
     errorsList.shift();
