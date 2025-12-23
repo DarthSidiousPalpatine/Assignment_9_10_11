@@ -1,0 +1,152 @@
+* {
+  margin: 0px;
+}
+
+
+header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 10vh;
+  background-color: #BCAAA4;
+
+  z-index: 2;
+
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  
+  img {
+    width: 7vw;
+    margin-left: 2vw;
+    transition: all 0.5s ease-in-out;
+  }
+
+  p {
+    margin-right: 2vw;
+    margin-left: 2vw;
+    height: 8vh;
+    border-radius: 2vw;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 2vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    &:hover {
+      background-color: #A1887F;
+      box-shadow: -2px -2px 2px #ffffff, 2px 2px 2px #111111;
+    }
+  }
+  
+  transition: all 0.5s ease-in;
+
+  .underTheHeader{
+    position: fixed;
+    top: 10vh;
+    left: 0px;
+    width: 100vw;
+    height: 20vh;
+    background-color: #ffffff;
+    transition: all 0.5s ease-in-out;
+    display: none;
+  }
+}
+
+main {
+  position: relative;
+  width: 100%;
+  min-height: 80vh;
+  background-color: #EFEBE9;
+  margin-top: 10vh;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  height: 10vh;
+  background-color: #BCAAA4;
+  
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  padding-top: 2vh;
+  padding: 1vw;
+  justify-content: center;
+  font-size: 4vh;
+  font-weight: bold;
+  text-align: center;
+  
+  color: #3E2723;
+  text-shadow: -1px -1px 2px #111111, 1px 1px 2px #ffffff;
+  
+  .textBlock {
+    padding: 3vw;
+    font-size: 3vh;
+    font-weight: normal;
+    text-align: left;
+    border-radius: 5vh;
+    text-shadow: none;
+    box-shadow: -2px -2px 2px #111111, 2px 2px 2px #ffffff;
+  }
+  
+  
+  .imageBlock {
+    margin-left: calc((100% - 50vw)/2);
+    margin-top: 2vh;
+    display: block;
+    width: 50vw;
+    border-bottom: 2px solid #111111;
+    border-radius: 5vh;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2vh;
+    background-color: #FAFAFA;
+    overflow: hidden;
+    img {
+      display: block;
+      width: 50vw;
+      margin: auto;
+    } 
+  }
+}
+
+
+.hidden {
+opacity: 0;
+transform: translateY(20px);
+transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.visible {
+opacity: 1;
+transform: translateY(0);
+}
+
+
+.minimised {
+  height: 5vh;
+  transition: all 0.5s ease-in-out;
+  p {
+    height: 4vh;
+  }
+
+  img {
+    width: 5vh;
+  }
+  
+  .underTheHeader{
+    top: 5vh;
+    transition: all 0.5s ease-in-out;
+    display: none;
+  }
+}
+
+
