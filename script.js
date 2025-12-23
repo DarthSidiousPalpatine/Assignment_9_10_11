@@ -80,7 +80,7 @@ showErrorBtn.addEventListener('click', function() {
 
 let errorsList = new Map()[[]];
 
-window.addEventListener('error', function(event) => {
+window.addEventListener('error', (event) => {
   console.log(event);
   let errString = `${event.error}<->${event.target}`;
   if(ErrorMonitor.errors[errString]) {
