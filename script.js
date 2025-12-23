@@ -78,7 +78,7 @@ showErrorBtn.addEventListener('click', function() {
 });
 
 
-let errorsList = new Map()[[]];
+let errorsList = new Map();
 
 window.addEventListener('error', (event) => {
   console.log(event);
