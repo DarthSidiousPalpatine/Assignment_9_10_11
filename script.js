@@ -83,7 +83,7 @@ let errorsList = new Map()[[]];
 window.addEventListener('error', (event) => {
   console.log(event);
   let errString = `${event.error}<->${event.target}`;
-  if(errorsList.length == 0 || errorsList[errString] == null) {
+  if(errorsList == null || errorsList.length == 0 || errorsList[errString] == null) {
     errorsList.set(errString, 1);
   } else {
     errorsList[errString]++;
