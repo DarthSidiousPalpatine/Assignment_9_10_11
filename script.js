@@ -78,16 +78,14 @@ showErrorBtn.addEventListener('click', function() {
 });
 
 
-const ErrorMonitor = {
-  errors: new Map()[[]],
-    init: function(){
-      window.addEventListener('error', gatherError);
-    },
-}
+let errorsList = new Map()[[]];
+
+window.addEventListener('error', gatherError(event));
 
 ErrorMonitor.init();
 
 function gatherError(event) {
+  console.log(event);
   let errString = `${event.error}<->${event.target}`;
   if(ErrorMonitor.errors[errString]) {
     ErrorMonitor.errors[errString]++;
