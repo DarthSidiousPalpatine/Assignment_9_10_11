@@ -83,16 +83,16 @@ let errorsList = new Map()[[]];
 window.addEventListener('error', (event) => {
   console.log(event);
   let errString = `${event.error}<->${event.target}`;
-  if(ErrorMonitor.errors[errString]) {
-    ErrorMonitor.errors[errString]++;
+  if(errorsList[errString]) {
+    errorsList[errString]++;
   }
-  ErrorMonitor.errors.set(errString, 1);
+  errorsList.set(errString, 1);
   
-  if(ErrorMonitor.errors.length > 10) {
-    ErrorMonitor.errors.shift();
+  if(errorsList.length > 10) {
+    errorsList.shift();
   }
   
-  console.log(ErrorMonitor.errors);
+  console.log(errorsList);
 });
   
 errorBtn.addEventListener('click', releaseTheKraken);
