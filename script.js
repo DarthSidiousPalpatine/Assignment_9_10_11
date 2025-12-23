@@ -80,11 +80,7 @@ showErrorBtn.addEventListener('click', function() {
 
 let errorsList = new Map()[[]];
 
-window.addEventListener('error', gatherError(event));
-
-ErrorMonitor.init();
-
-function gatherError(event) {
+window.addEventListener('error', function(event) => {
   console.log(event);
   let errString = `${event.error}<->${event.target}`;
   if(ErrorMonitor.errors[errString]) {
@@ -97,7 +93,6 @@ function gatherError(event) {
   }
   
   console.log(ErrorMonitor.errors);
-}
-
-
+});
+  
 errorBtn.addEventListener('click', releaseTheKraken);
