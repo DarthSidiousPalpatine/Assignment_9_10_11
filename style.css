@@ -18,7 +18,7 @@ header {
   align-items: center;
   
   img {
-    width: 7vw;
+    width: 5vw;
     margin-left: 2vw;
     transition: all 0.5s ease-in-out;
   }
@@ -49,10 +49,14 @@ header {
     top: 10vh;
     left: 0px;
     width: 100vw;
-    height: 20vh;
+    min-height: 20vh;
     background-color: #ffffff;
     transition: all 0.5s ease-in-out;
     display: none;
+    
+    p {
+      pointer-events: none;
+    }
   }
 }
 
