@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Умная форма регистрации</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header" id="header">
+  <img alt="Лого" src="https://github.com/DarthSidiousPalpatine/Assignment_6_7_8_13/blob/main/Гусик1.png?raw=true"/>
+  <p id="scroll1">
+    Обо мне
+  </p>
+  <p id="scroll2">
+    Навыки
+  </p>
+  <p id="scroll3">
+    Портфолио
+  </p>
+  <p id="scroll4">
+    Контакты
+  </p>
+  
+  <p id="errorBtn">
+    Кнопка для ошибок (не работает)
+  </p>
+  <p id="showErrorBtn">
+    Показать нажатия
+  </p>
+  <div class="underTheHeader" id="ErrorsList">
+  </div>
+</header>
+
+<main>
+  <section id="Myself" class="section hidden">
+    Обо мне
+    <div class="textBlock">
+      Я, Гусев А.А. - студент.<BR>
+      <div class="imageBlock">
+        <img alt="КартинкаГусей" src="https://cs8.pikabu.ru/post_img/big/2017/07/18/6/150036815818342374.jpg"/>
+        И эта картинка меня полностью описывает.
+      </div>
+    </div>
+  </section>
+  <section id="Perks" class="section hidden">
+    Навыки
+    <div class="textBlock">
+      <ul>
+        <li>Рисунок</li>
+        <li>Игра на фортепиано</li>
+        <li>Игра на гитаре</li>
+        <li>Игра на укулеле</li>
+        <li>Игра на поперечной флейте</li>
+        <li>Игра на блок-флейте</li>
+        <li>Игра на аккордеоне</li>
+        <li>Игра на губной гармошке</li>
+        <li>Художественный свист</li>
+        <li>Пиксельарт</li>
+        <li>Немного 3д моделирования</li>
+        <li>Английский на уровне C1</li>
+        <li>Немного программирования</li>
+        <li>Расслаблено держусь на воде лёжа на спине</li>
+      </ul>
+    </div>
+  </section>
+  <section id="Images" class="section hidden">
+    Портфолио
+    <div class="textBlock">
+      <div class="imageBlock hidden">
+        <img alt="Международная Космическая Станция" src="https://avatars.mds.yandex.net/i?id=e5c5605efccda747c9e24e25cb78e2ae_l-5553595-images-thumbs&n=13"/>
+        Создал МКС.
+      </div>
+      <div class="imageBlock hidden">
+        <img alt="Пирамиды в Гизе" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/All_Gizah_Pyramids.jpg/960px-All_Gizah_Pyramids.jpg"/>
+        Построил пирамиды в Гизе.
+      </div>
+      <div class="imageBlock hidden">
+        <img alt="Вавилонская башня" src="https://i.pinimg.com/originals/73/ae/c7/73aec7b18a6518a78219ae2b416b7708.jpg"/>
+        Соорудил Вавилонскую Башню.
+      </div>
+      <div class="imageBlock hidden">
+        <img alt="Сломанная вавилонская башня" src="https://i.ytimg.com/vi/-qP2InATcAU/maxresdefault.jpg"/>
+        Разрушил Вавилонскую Башню.
+      </div>
+      <div class="imageBlock hidden">
+        <img alt="Отдых на диване" src="https://i.pinimg.com/736x/72/4f/fb/724ffb4d149c01b6390a4b9d134b4678.jpg"/>
+        Славно отдохнул.
+      </div>
+      <div class="imageBlock hidden">
+        <img alt="Бутерброд" src="https://novate.ru/preview/61781s3.jpg"/>
+        Сделал бутерброд.
+      </div>
+      <div class="imageBlock hidden">
+        <img alt="Тот же бутерброд" src="https://novate.ru/preview/61781s3.jpg"/>
+        Благодаря силе воли не съел бутерброд.
+      </div>
+      <div class="imageBlock hidden">
+        <img alt="пустота"/>
+        Родился.
+      </div>
+      <div class="imageBlock hidden">
+        <img alt="Одностраничный сайт" src="https://github.com/DarthSidiousPalpatine/Assignment_6_7_8_13/blob/main/Снимок%20экрана%202025-12-24%20021723.png?raw=true"/>
+        Соврал в своём портфолио.
+      </div>
+      <div class="imageBlock hidden">
+        <img alt="Пустая разделочная доска" src="https://github.com/DarthSidiousPalpatine/Assignment_6_7_8_13/blob/main/61781s3_cleanup.jpg?raw=true"/>
+        Обманул, всё таки съел.
+      </div>
+    </div>
+  </section>
+  <section id="Contacts" class="section hidden">
+    Контакты
+    <div class="textBlock">
+      <p>
+        Я сам вас найду....
+      </p>
+      <label for="telNum">Но можете мне написать свой номер:</label>
+      <input id="telNum" name="telNum" type="tel"/>
+    </div>
+  </section>
+</main>
+
+<footer>
+  Все права заШиШены. (c) Пиратский перевод Гарри Поттера и Философского камня на PS1
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
