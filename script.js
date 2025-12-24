@@ -93,7 +93,15 @@ window.addEventListener('error', (event) => {
     errorsList.shift();
   }
   
-  console.log(errorsList);
+  updateErrorsList();
 });
-  
+
+function updateErrorsList(){
+  underTheHeader.innerHTML = "";
+ for(let i = 0; i < errorsList.length; i++) {
+  let errorLine = document.createElement('p');
+   errorLine.innerHTML = `${errorList[i].key}, кол-во: ${errorList[i].value}`;
+   underTheHeader.appendChild(errorLine);
+ }
+}  
 errorBtn.addEventListener('click', releaseTheKraken);
