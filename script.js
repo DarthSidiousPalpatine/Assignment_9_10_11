@@ -78,30 +78,32 @@ showErrorBtn.addEventListener('click', function() {
 });
 
 
-let errorsList = new Map();
+const errorsList = new Map();
 
-window.addEventListener('error', (event) => {
-  console.log(event);
-  let errString = `${event.error}<->${event.target}`;
-  if(errorsList == null || errorsList.length == 0 || errorsList[errString] == null) {
+document.addEventListener('click', (event) => {
+  let errString = `${event.target}|${event.target.className ? event.target.className : "noClassName"}|${event.target.id ? event.target.id : "noID"}`;
+  if(errorsList.get(errString) == null) {
     errorsList.set(errString, 1);
   } else {
-    errorsList[errString]++;
+    errorsList.set(errString, errorsList.get(errString) + 1);
   }
   
-  if(errorsList.length > 10) {
-    errorsList.shift();
+  if(errorsList.size > 10) {
+    for(const [key, value] of errorsList) {
+      errorsList.delete(key);
+      break;
+    }
   }
   
   updateErrorsList();
 });
 
-function updateErrorsList(){
+function updateErrorsList() {
   underTheHeader.innerHTML = "";
- for(let i = 0; i < errorsList.length; i++) {
+ for(const [key, value] of errorsList) {
   let errorLine = document.createElement('p');
-   errorLine.innerHTML = `${errorList[i].key}, кол-во: ${errorList[i].value}`;
+   errorLine.innerHTML = `${key}, кол-во: ${value}`;
    underTheHeader.appendChild(errorLine);
- }
+ };
 }  
-errorBtn.addEventListener('click', releaseTheKraken);
+//errorBtn.addEventListener('click', releaseTheKraken);
